@@ -16,6 +16,7 @@ public class Window extends JFrame {
         setSize(500, 500);
         setLocationRelativeTo(null);
         setLocation(0, 0);
+        add(Canvas.getInstance());
         setVisible(true);
     }
 }
