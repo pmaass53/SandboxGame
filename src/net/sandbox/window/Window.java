@@ -7,14 +7,12 @@ public class Window extends JFrame {
     private static final Logger LOGGER = Logger.getLogger(Window.class.getName());
     private static Window windowInstance;
     public static void bindInstance(Window instance) {
-        LOGGER.info("Creating Window Instance...");
         Window.windowInstance = instance;
     }
     public static Window getInstance() {
         return Window.windowInstance;
     }
     public void bindCanvas(Canvas c) {
-        LOGGER.info("Binding Canvas to Window...");
         add(c);
     }
     public Window() {
@@ -25,6 +23,5 @@ public class Window extends JFrame {
         setLocationRelativeTo(null);
         setLocation(0, 0);
         setVisible(true);
-        LOGGER.info("Created Window");
     }
 }

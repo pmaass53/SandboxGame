@@ -1,5 +1,6 @@
 package net.sandbox.window;
 
+import java.util.logging.Logger;
 import javax.swing.JPanel;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -9,7 +10,6 @@ public class Canvas extends JPanel {
     private static final Logger LOGGER = Logger.getLogger(Canvas.class.getName());
     private static Canvas canvasInstance;
     public static void bindInstance(Canvas instance) {
-        LOGGER.info("Creating Canvas Instance...");
         Canvas.canvasInstance = instance;
     }
     public static Canvas getInstance() {
