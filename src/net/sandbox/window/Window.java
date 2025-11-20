@@ -10,13 +10,15 @@ public class Window extends JFrame {
     public static Window getInstance() {
         return Window.windowInstance;
     }
+    public void bindCanvas(Canvas c) {
+        add(c);
+    }
     public Window() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setTitle("Sandbox v0.1");
         setSize(500, 500);
         setLocationRelativeTo(null);
         setLocation(0, 0);
-        add(Canvas.getInstance());
         setVisible(true);
     }
 }
