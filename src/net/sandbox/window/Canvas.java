@@ -6,8 +6,10 @@ import java.awt.Graphics2D;
 import java.awt.Color;
 
 public class Canvas extends JPanel {
+    private static final Logger LOGGER = Logger.getLogger(Canvas.class.getName());
     private static Canvas canvasInstance;
     public static void bindInstance(Canvas instance) {
+        LOGGER.info("Creating Canvas Instance...");
         Canvas.canvasInstance = instance;
     }
     public static Canvas getInstance() {

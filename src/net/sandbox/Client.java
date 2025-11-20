@@ -11,5 +11,6 @@ public class Client {
         LOGGER.info("Initializing Client...");
         Canvas.bindInstance(new Canvas());
         Window.bindInstance(new Window());
+        Window.getInstance().bindCanvas(Canvas.getInstance());
     }
 }
