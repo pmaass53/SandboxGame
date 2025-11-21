@@ -17,14 +17,13 @@ public class TextureLoader {
         return cache.get(key);
     }
     public static Image readFromFile(String fileName) {
-        Image img = null;
         try {
-            // read image
-            img = ImageIO.read(new File("./resources/textures/" + fileName + ".jpg"));
-            LOGGER.info(img.getClass());
+            Image img = ImageIO.read(new File(TEXTURES_RELATIVE_PATH + fileName));
+            return img;
         } catch (Exception e) {
             LOGGER.severe("Error Loading Image from File: " + e.getMessage());
+            e.printStackTrace();
+            return null;
         }
-        return img;
     }
 }

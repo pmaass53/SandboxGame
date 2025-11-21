@@ -27,6 +27,7 @@ public class Canvas extends JPanel {
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
         Image img = TextureLoader.getTexture("bricks");
-        g2.drawImage(img, 0, 0, null);
+        System.out.println(img == null);
+        g2.drawImage(img, 50, 50, this);
     }
 }
