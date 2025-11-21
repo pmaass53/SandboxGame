@@ -19,7 +19,7 @@ public class Window extends JFrame {
         LOGGER.info("Initializing Window...");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setTitle("Sandbox v0.1");
-        setSize(500, 500);
+        setSize(640, 640);
         setLocationRelativeTo(null);
         setLocation(0, 0);
         setVisible(true);

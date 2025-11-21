@@ -5,6 +5,7 @@ import javax.swing.JPanel;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Color;
+import java.awt.Dimension;
 
 public class Canvas extends JPanel {
     private static final Logger LOGGER = Logger.getLogger(Canvas.class.getName());
@@ -14,6 +15,9 @@ public class Canvas extends JPanel {
     }
     public static Canvas getInstance() {
         return Canvas.canvasInstance;
+    }
+    public Canvas() {
+        setPreferredSize(new Dimension(640, 640));
     }
     @Override
     public void paintComponent(Graphics g) {
