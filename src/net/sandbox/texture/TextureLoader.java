@@ -7,7 +7,7 @@ import java.io.File;
 import java.util.logging.Logger;
 
 public class TextureLoader {
-    private static final Logger LOGGER = Logger.getLogger(Canvas.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(TextureLoader.class.getName());
     public static String TEXTURES_RELATIVE_PATH = "./resources/textures/";
     public static HashMap<String, Image> cache = new HashMap<String, Image>();
     public static Image getTexture(String key) {
@@ -17,12 +17,13 @@ public class TextureLoader {
         return cache.get(key);
     }
     public static Image readFromFile(String fileName) {
-        Image img;
+        Image img = null;
         try {
             // read image
             img = ImageIO.read(new File("./resources/textures/" + fileName + ".jpg"));
+            LOGGER.info(img.getClass());
         } catch (Exception e) {
-            LOGGER.severe("Error Loading Image from File: " + e.getMessage(), e);
+            LOGGER.severe("Error Loading Image from File: " + e.getMessage());
         }
         return img;
     }

@@ -6,6 +6,9 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Image;
+
+import net.sandbox.texture.TextureLoader;
 
 public class Canvas extends JPanel {
     private static final Logger LOGGER = Logger.getLogger(Canvas.class.getName());
@@ -23,7 +26,7 @@ public class Canvas extends JPanel {
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
-        g2.setColor(Color.RED);
-        g2.fillRect(0, 0, 640, 640);
+        Image img = TextureLoader.getTexture("bricks");
+        g2.drawImage(img, 0, 0, null);
     }
 }
