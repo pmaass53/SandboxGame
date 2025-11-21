@@ -18,7 +18,7 @@ public class TextureLoader {
     }
     public static Image readFromFile(String fileName) {
         try {
-            Image img = ImageIO.read(new File(TEXTURES_RELATIVE_PATH + fileName));
+            Image img = ImageIO.read(new File(TEXTURES_RELATIVE_PATH + fileName + ".png"));
             return img;
         } catch (Exception e) {
             LOGGER.severe("Error Loading Image from File: " + e.getMessage());
